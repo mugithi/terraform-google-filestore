@@ -16,6 +16,7 @@
 
 resource "google_filestore_instance" "instance" {
   name    = var.filestore_name
+  project = var.project_id
   zone    = var.zone
   tier    = var.tier
 

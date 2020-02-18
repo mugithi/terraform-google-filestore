@@ -18,16 +18,16 @@ variable "project_id" {
   description = "project - (Optional) The ID of the project in which the resource belongs. If it is not provided, the provider project is used."
 }
 
+variable "zone" {
+  description = "zone - (Required) The name of the Filestore zone of the instance."
+}
+
 variable "filestore_name" {
   description = "name - (Required) The resource name of the instance."
 }
 
 variable "tier" {
   description = "tier - (Required) The service tier of the instance."  
-}
-
-variable "zone" {
-  description = "zone - (Required) The name of the Filestore zone of the instance."
 }
 
 variable "file_shares_name" {

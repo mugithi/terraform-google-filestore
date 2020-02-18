@@ -14,12 +14,36 @@
  * limitations under the License.
  */
 
-variable "project_id" {
-  description = "The ID of the project in which to provision resources."
-  type        = string
+
+variable "filestore_name" {
+  description = "name - (Required) The resource name of the instance."
 }
 
-variable "bucket_name" {
-  description = "The name of the bucket to create."
-  type        = string
+variable "project_id" {
+  description = "project - (Optional) The ID of the project in which the resource belongs. If it is not provided, the provider project is used."
 }
+
+variable "zone" {
+  description = "zone - (Required) The name of the Filestore zone of the instance."
+}
+
+variable "tier" {
+  description = "tier - (Required) The service tier of the instance."  
+}
+
+variable "capacity_gb" {
+  description = "capacity_gb - (Required) File share capacity in GiB. This must be at least 1024 GiB for the standard tier, or 2560 GiB for the premium tier."
+}
+
+variable "file_shares_name" {
+  description = "file_shares_name - (Required) The name of the fileshare (16 characters or less)"
+}
+
+variable "network" {
+  description = "network - (Required) The name of the GCP VPC network to which the instance is connected."
+}
+
+variable "modes" {
+  description = "modes - (Required) IP versions for which the instance has IP addresses assigned."
+}
+

@@ -20,7 +20,12 @@ provider "google" {
 
 module "filestore" {
   source = "../.."
-
-  project_id  = var.project_id
-  bucket_name = var.bucket_name
+  name        = var.file_shares_name
+  project_id     = var.project_id
+  zone        = var.zone
+  tier        = var.tier
+  capacity_gb = var.capacity_gb
+  name        = var.file_shares_name
+  network     = var.network
+  modes       = var.modes
 }
