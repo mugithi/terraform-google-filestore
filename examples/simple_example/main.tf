@@ -33,3 +33,4 @@ module "filestore" {
     network               = var.network
     modes                 = var.modes
   }
+}
