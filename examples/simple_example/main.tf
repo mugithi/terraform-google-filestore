@@ -21,7 +21,6 @@ provider "google" {
 module "filestore" {
   source = "../.."
   name                    = "test_file_share"
-  # project_id              = var.project_id
   zone                    = "us-central1-a"
   tier                    = "PREMIUM"
 

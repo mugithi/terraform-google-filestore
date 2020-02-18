@@ -19,16 +19,13 @@ variable "filestore_name" {
   description = "name - (Required) The resource name of the instance."
 }
 
-variable "project_id" {
-  description = "project - (Optional) The ID of the project in which the resource belongs. If it is not provided, the provider project is used."
-}
-
 variable "zone" {
   description = "zone - (Required) The name of the Filestore zone of the instance."
 }
 
 variable "tier" {
-  description = "tier - (Required) The service tier of the instance."  
+  description = "tier - (Required) The service tier of the instance. Can be PREMIUM or STANDARD"
+  default = "PREMIUM"
 }
 
 variable "capacity_gb" {
@@ -41,6 +38,7 @@ variable "file_shares_name" {
 
 variable "network" {
   description = "network - (Required) The name of the GCP VPC network to which the instance is connected."
+  default = ["MODE_IPV4"]
 }
 
 variable "modes" {
