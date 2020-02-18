@@ -25,12 +25,12 @@ module "filestore" {
   tier                    = "PREMIUM"
 
   file_shares = {
-    capacity_gb           = "2056"
-    name                  = "test_file_share"
+    capacity_gb = "2056"
+    name        = "test_file_share"
   }
 
   networks = {
-    network               = "default"
-    modes                 = ["MODE_IPV4"]
+    network     = "default"
+    modes       = ["MODE_IPV4"]
   }
 }

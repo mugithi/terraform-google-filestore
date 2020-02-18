@@ -15,8 +15,7 @@
  */
 
 
-
- variable "filestore_name" {
+variable "filestore_name" {
   description = "name - (Required) The resource name of the instance."
 }
 
@@ -46,7 +45,6 @@ variable "network" {
 variable "modes" {
   description = "modes - (Required) IP versions for which the instance has IP addresses assigned."
 }
-
 
 # variable "reserved_ip_range" {
 #   description = "reserved_ip_range - (Optional) A /29 CIDR block that identifies the range of IP addresses reserved for this instance."
