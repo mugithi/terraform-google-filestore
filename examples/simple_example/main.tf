@@ -24,12 +24,12 @@ module "filestore" {
   zone                    = "us-central1-a"
   tier                    = "PREMIUM"
 
-  file_shares {
-    capacity_gb           = "2048"
+  file_shares = {
+    capacity_gb           = "2056"
     name                  = "test_file_share"
   }
 
-  networks {
+  networks = {
     network               = "default"
     modes                 = ["MODE_IPV4"]
   }
