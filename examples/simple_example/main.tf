@@ -24,8 +24,12 @@ module "filestore" {
   project_id              = var.project_id
   zone                    = var.zone
   tier                    = var.tier
-  file_shares.capacity_gb = var.capacity_gb
-  file_shares.name        = var.file_shares_name
-  networks.network                 = var.network
-  networks.modes                   = var.modes
-}
+  file_shares {
+    capacity_gb           = var.capacity_gb
+    name                  = var.file_shares_name
+  }
+
+  networks {
+    network               = var.network
+    modes                 = var.modes
+  }
