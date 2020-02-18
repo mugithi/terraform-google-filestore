@@ -20,17 +20,18 @@ provider "google" {
 
 module "filestore" {
   source = "../.."
-  name                    = var.file_shares_name
-  project_id              = var.project_id
-  zone                    = var.zone
-  tier                    = var.tier
+  name                    = "test_file_share"
+  # project_id              = var.project_id
+  zone                    = "us-central1-a"
+  tier                    = "PREMIUM"
+
   file_shares {
-    capacity_gb           = var.capacity_gb
-    name                  = var.file_shares_name
+    capacity_gb           = "2048"
+    name                  = "test_file_share"
   }
 
   networks {
-    network               = var.network
-    modes                 = var.modes
+    network               = "default"
+    modes                 = ["MODE_IPV4"]
   }
 }
