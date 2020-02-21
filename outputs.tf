@@ -14,14 +14,10 @@
  * limitations under the License.
  */
 
-provider "google" {
-  version     = "~> 3.0"
+output "filestore_ip" {
+  value = google_filestore_instance.instance.networks[0].ip_addresses[0]
 }
 
-provider "google-beta" {
-  version     = "~> 3.9.0"
-}
-
-terraform {
-  required_version = "~> 0.12.6"
+output "filestore_name" {
+  value = google_filestore_instance.instance.file_shares[0].name
 }
