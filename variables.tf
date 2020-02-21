@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+variable "project_id" {
+  default = "fair-test-project"
+}
+
 variable "filestore_name" {
   description = "name - (Required) The resource name of the instance."
 }

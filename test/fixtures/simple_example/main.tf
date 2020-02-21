@@ -28,7 +28,7 @@ terraform {
 
 module "filestore" {
   source = "../../.."
-  filestore_name   = "filestorenew"
+  filestore_name   = "filestorenews"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
   capacity_gb = 2560
