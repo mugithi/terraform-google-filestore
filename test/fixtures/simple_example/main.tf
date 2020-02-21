@@ -28,6 +28,7 @@ terraform {
 
 module "filestore" {
   source = "../../.."
+  project_id = "fair_test_project"
   filestore_name   = "filestorenews"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
