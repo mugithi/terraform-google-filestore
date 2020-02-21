@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 variable "name" {
   description = "name - (Required) The resource name of the instance."
 }

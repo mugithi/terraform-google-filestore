@@ -14,19 +14,20 @@
  * limitations under the License.
  */
 
-provider "random" {
-  version = "~> 2.0"
+module "filestore" {
+  source = "../.."
+  name   = "filestorenew"
+  zone   = "us-central1-a"
+  tier   = "PREMIUM"
+
+  file_shares = {
+    capacity_gb = 2560
+    file_shares_name = "filestore"
+  }
+
+  networks = {
+    network = "default"
+    modes   = ["MODE_IPV4"]
+  }
 }
 
-resource "random_pet" "main" {
-  length    = 1
-  prefix    = "simple-example"
-  separator = "-"
-}
-
-module "example" {
-  source = "../../../examples/simple_example"
-
-  project_id  = var.project_id
-  bucket_name = random_pet.main.id
-}
