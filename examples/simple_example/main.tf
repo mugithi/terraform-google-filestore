@@ -17,20 +17,23 @@
 # TF-UPGRADE-TODO: Top-level attributes are not valid, so this was not automatically upgraded.
 
 
+
+terraform {
+  required_version = "~> 0.12.6"
+  required_providers {
+    google = "~> 3.9.0"
+    google-beta = "~> 3.9.0"
+  }
+}
+
 module "filestore" {
-  source = "../.."
-  name   = "filestorenew"
+  source = "../../modules/filestore/"
+  filestore_name   = "filestorenew"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
-
-  file_shares = {
-    capacity_gb = 2560
-    file_shares_name = "filestore"
-  }
-
-  networks = {
-    network = "default"
-    modes   = ["MODE_IPV4"]
-  }
+  capacity_gb = 2560
+  file_shares_name = "filestore"
+  network = "default"
+  modes   = ["MODE_IPV4"]
 }
 
