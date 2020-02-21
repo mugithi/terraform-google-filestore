@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
-output "bucket_name" {
-  value = google_storage_bucket.main.name
+output "filestore_ip" {
+  value = google_filestore_instance.instance.networks[0].ip_addresses[0]
+}
+
+output "filestore_name" {
+  value = google_filestore_instance.instance.file_shares[0].name
 }

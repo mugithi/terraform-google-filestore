@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-provider "google" {
-  version = "~> 2.0"
-}
+# TF-UPGRADE-TODO: Top-level attributes are not valid, so this was not automatically upgraded.
+
 
 module "filestore" {
   source = "../.."
-  name                    = "test_file_share"
-  zone                    = "us-central1-a"
-  tier                    = "PREMIUM"
+  name   = "filestorenew"
+  zone   = "us-central1-a"
+  tier   = "PREMIUM"
 
   file_shares = {
-    capacity_gb = "2056"
-    name        = "test_file_share"
+    capacity_gb = 2560
+    file_shares_name = "filestore"
   }
 
   networks = {
-    network     = "default"
-    modes       = ["MODE_IPV4"]
+    network = "default"
+    modes   = ["MODE_IPV4"]
   }
 }
+

@@ -15,7 +15,7 @@
  */
 
 
-variable "filestore_name" {
+variable "name" {
   description = "name - (Required) The resource name of the instance."
 }
 
@@ -39,7 +39,6 @@ variable "file_shares_name" {
 
 variable "network" {
   description = "network - (Required) The name of the GCP VPC network to which the instance is connected."
-  default = ["MODE_IPV4"]
 }
 
 variable "modes" {

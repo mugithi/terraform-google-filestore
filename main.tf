@@ -14,19 +14,27 @@
  * limitations under the License.
  */
 
+provider "google" {
+  version     = "~> 3.0"
+}
+
+provider "google-beta" {
+  version     = "~> 3.9.0"
+}
+
 resource "google_filestore_instance" "instance" {
-  name    = var.filestore_name
-  zone    = var.zone
-  tier    = var.tier
+  name    = "${var.filestore_name}"
+  zone    = "${var.zone}"
+  tier    = "${var.tier}"
   
   file_shares {
-    capacity_gb = var.capacity_gb
-    name        = var.file_shares_name
+    capacity_gb = "${var.capacity_gb}"
+    name        = "${var.file_shares_name}"
   }
 
   networks {
-    network     = var.network
-    modes       = var.modes
+    network     = "${var.network}"
+    modes       = "${var.modes}"
   }
 }
 
