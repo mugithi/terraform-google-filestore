@@ -15,7 +15,7 @@
  */
 
 module "filestore" {
-  source = "../.."
+  source = "../../.."
   name   = "filestorenew"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
