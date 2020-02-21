@@ -27,7 +27,7 @@ terraform {
 }
 
 module "filestore" {
-  source = "../.."
+  source = "../../.."
   filestore_name   = "filestorenew"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
