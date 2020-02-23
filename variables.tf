@@ -24,12 +24,12 @@ variable "filestore_name" {
 
 variable "zone" {
   description = "zone - (Required) The name of the Filestore zone of the instance."
-  default = "us-central1-a"
+  default     = "us-central1-a"
 }
 
 variable "tier" {
   description = "tier - (Required) The service tier of the instance. Can be PREMIUM or STANDARD"
-  default = "PREMIUM"
+  default     = "PREMIUM"
 }
 
 variable "capacity_gb" {

@@ -21,19 +21,20 @@
 terraform {
   required_version = "~> 0.12.6"
   required_providers {
-    google = "~> 3.9.0"
+    google      = "~> 3.9.0"
     google-beta = "~> 3.9.0"
   }
 }
 
 module "filestore" {
-  source = "../.."
+  source           = "../.."
+  project          = "ci-filestore-new-0903"
   filestore_name   = "filestorenew"
-  zone   = "us-central1-a"
-  tier   = "PREMIUM"
-  capacity_gb = 2560
+  zone             = "us-central1-a"
+  tier             = "PREMIUM"
+  capacity_gb      = 2560
   file_shares_name = "filestore"
-  network = "default"
-  modes   = ["MODE_IPV4"]
+  network          = "default"
+  modes            = ["MODE_IPV4"]
 }
 

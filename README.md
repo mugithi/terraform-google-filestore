@@ -4,7 +4,7 @@ This module was generated from [terraform-google-module-template](https://github
 
 The resources/services/activations/deletions that this module will create/trigger are:
 
-- Create a GCS bucket with the provided name
+- Create a Filestore share with the provided name
 
 ## Usage
 
@@ -28,14 +28,21 @@ Functional examples are included in the
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| bucket\_name | The name of the bucket to create | string | n/a | yes |
-| project\_id | The project ID to deploy to | string | n/a | yes |
+| capacity\_gb | capacity_gb - (Required) File share capacity in GiB. This must be at least 1024 GiB for the standard tier, or 2560 GiB for the premium tier. | string | n/a | yes |
+| file\_shares\_name | file_shares_name - (Required) The name of the fileshare (16 characters or less) | string | n/a | yes |
+| filestore\_name | name - (Required) The resource name of the instance. | string | n/a | yes |
+| modes | modes - (Required) IP versions for which the instance has IP addresses assigned. | string | n/a | yes |
+| network | network - (Required) The name of the GCP VPC network to which the instance is connected. | string | n/a | yes |
+| project\_id |  | string | `"fair-test-project"` | no |
+| tier | tier - (Required) The service tier of the instance. Can be PREMIUM or STANDARD | string | `"PREMIUM"` | no |
+| zone | zone - (Required) The name of the Filestore zone of the instance. | string | `"us-central1-a"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| bucket\_name |  |
+| filestore\_ip |  |
+| filestore\_name |  |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
