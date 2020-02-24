@@ -23,7 +23,6 @@ module "filestore" {
   network          = "default"
   modes            = ["MODE_IPV4"]
 }
-}
 ```
 
 Functional examples are included in the
