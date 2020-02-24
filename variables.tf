@@ -46,6 +46,7 @@ variable "network" {
 
 variable "modes" {
   description = "modes - (Required) IP versions for which the instance has IP addresses assigned."
+  default = ["MODE_IPV4"]
 }
 
 # variable "reserved_ip_range" {
