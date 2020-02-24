@@ -15,7 +15,7 @@
 control "gcp" do
   title "GCP Resources"
 
-  describe google_storage_bucket(name: attribute("bucket_name")) do
+  describe google_filestore_instances(name: attribute("filestore_name")) do
     it { should exist }
   end
 end

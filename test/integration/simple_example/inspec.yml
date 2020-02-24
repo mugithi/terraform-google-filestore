@@ -4,9 +4,9 @@ depends:
     git: https://github.com/inspec/inspec-gcp.git
     tag: v0.10.0
 attributes:
-  - name: project_id
+  - name: filestore_name
     required: true
     type: string
-  - name: bucket_name
+  - name: filestore_ip
     required: true
     type: string

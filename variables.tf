@@ -15,7 +15,7 @@
  */
 
 variable "project_id" {
-  default = "fair-test-project"
+  description = "the project ID which the resource belongs."
 }
 
 variable "filestore_name" {

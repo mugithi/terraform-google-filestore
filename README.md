@@ -12,11 +12,17 @@ Basic usage of this module is as follows:
 
 ```hcl
 module "filestore" {
-  source  = "terraform-google-modules/filestore/google"
+  source  = "terraform-google-modules/filestore/mugithi"
   version = "~> 0.1"
 
-  project_id  = "<PROJECT ID>"
-  bucket_name = "gcs-test-bucket"
+  filestore_name   = "filestorenew"
+  zone             = "us-central1-a"
+  tier             = "PREMIUM"
+  capacity_gb      = 2560
+  file_shares_name = "filestore"
+  network          = "default"
+  modes            = ["MODE_IPV4"]
+}
 }
 ```
 

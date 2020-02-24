@@ -17,18 +17,9 @@
 # TF-UPGRADE-TODO: Top-level attributes are not valid, so this was not automatically upgraded.
 
 
-
-terraform {
-  required_version = "~> 0.12.6"
-  required_providers {
-    google = "~> 3.9.0"
-    google-beta = "~> 3.9.0"
-  }
-}
-
 module "filestore" {
   source = "../../.."
-  project_id = "fair_test_project"
+  project_id = "network-host-project-243718"
   filestore_name   = "filestorenews"
   zone   = "us-central1-a"
   tier   = "PREMIUM"
