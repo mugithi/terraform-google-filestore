@@ -15,9 +15,26 @@
  */
 
 output "filestore_ip" {
-  value = google_filestore_instance.instance.networks[0].ip_addresses[0]
+  description = "A list of IPv4 or IPv6 addresses that can be used to mount this file share"
+  value       = google_filestore_instance.instance.networks[0].ip_addresses[0]
 }
 
 output "filestore_name" {
-  value = google_filestore_instance.instance.file_shares[0].name
+  description = "File system shares on the instance. For this version, only a single file share is supported."
+  value       = google_filestore_instance.instance.file_shares[0].name
+}
+
+output "filestore_all_parameters" {
+  description = "All available paremeters of this a filestore instance"
+  value       = google_filestore_instance.instance
+}
+
+output "reserved_ip_range" {
+  description = "A /29 CIDR block in one of the internal IP address ranges that identifies the range of IP addresses reserved for this instance. "
+  value       = google_filestore_instance.instance.networks[0].reserved_ip_range
+}
+
+output "id" {
+  description = "GCP ID of the Filestore resource"
+  value       = google_filestore_instance.instance.id
 }

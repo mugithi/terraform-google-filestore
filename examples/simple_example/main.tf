@@ -17,7 +17,7 @@
 # TF-UPGRADE-TODO: Top-level attributes are not valid, so this was not automatically upgraded.
 
 module "filestore" {
-  source           = "../.."
+  source           = "github.com/mugithi/terraform-google-filestore"
   project_id       = "network-host-project-243718"
   filestore_name   = "filestorenew"
   zone             = "us-central1-a"

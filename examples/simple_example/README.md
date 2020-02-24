@@ -3,6 +3,12 @@
 This example illustrates how to use the `filestore` module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| filestore\_ip | A list of IPv4 or IPv6 addresses that can be used to mount this file share |
+| filestore\_name | File system shares on the instance. For this version, only a single file share is supported. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

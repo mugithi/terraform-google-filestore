@@ -15,9 +15,11 @@
  */
 
 output "filestore_ip" {
-  value = module.filestore.filestore_ip
+  description = "A list of IPv4 or IPv6 addresses that can be used to mount this file share"
+  value       = module.filestore.filestore_ip
 }
 
 output "filestore_name" {
-  value = module.filestore.filestore_name
+  description = "File system shares on the instance. For this version, only a single file share is supported."
+  value       = module.filestore.filestore_name
 }
